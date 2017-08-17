@@ -4,13 +4,13 @@ const Teacher = require('../../main/practice-2/teacher');
 const Class = require('../../main/practice-2/class');
 
 describe("Person", () => {
-  it("should have field name and age", () => {
+  fit("should have field name and age", () => {
     let person = new Person("Tom", 21);
     expect(person.name).toBe("Tom");
     expect(person.age).toBe(21);
   });
 
-  it("should have a method introduce, introduce person with name and age", () => {
+  fit("should have a method introduce, introduce person with name and age", () => {
     let person = new Person("Tom", 21);
 
     let introduce = person.introduce();
@@ -20,7 +20,7 @@ describe("Person", () => {
   });
 
   describe("Student", () => {
-    it("should have field name, age and class", () => {
+    fit("should have field name, age and class", () => {
       let clazz = new Class(2);
       let student = new Student("Tom", 21, clazz);
       expect(student.name).toBe("Tom");
@@ -29,7 +29,7 @@ describe("Person", () => {
 
     });
 
-    it("should overwrite Person introduce, introduce student with class", () => {
+    fit("should overwrite Person introduce, introduce student with class", () => {
       let clazz = new Class(2);
       let student = new Student("Tom", 21, clazz);
       let introduce = student.introduce();
@@ -38,7 +38,7 @@ describe("Person", () => {
 
     });
 
-    it("should introduce student is a leader, when class assign this student to be a leader",
+    fit("should introduce student is a leader, when class assign this student to be a leader",
     () => {
       let clazz = new Class(2);
       let student = new Student("Tom", 21, clazz);
@@ -53,7 +53,7 @@ describe("Person", () => {
 
   describe("Teacher", () => {
 
-    it("should have field name, age and klass", () => {
+    fit("should have field name, age and klass", () => {
       let clazz1 = new Class(2);
       let clazz2 = new Class(3);
       let teacher = new Teacher("Joun", 21, [clazz1, clazz2]);
@@ -62,7 +62,7 @@ describe("Person", () => {
       expect(teacher.clazzes).toEqual([clazz1, clazz2]);
     });
 
-    it("should overwrite Person introduce and show all class this teacher teaches, when init two classed to this teacher",
+    fit("should overwrite Person introduce and show all class this teacher teaches, when init two classed to this teacher",
     () => {
       let clazz1 = new Class(2);
       let clazz2 = new Class(3);
@@ -74,7 +74,7 @@ describe("Person", () => {
 
     });
 
-    it("should show no class this teacher teacher, when there is no class assgin to this teacher",
+    fit("should show no class this teacher teacher, when there is no class assgin to this teacher",
     () => {
       let teacher = new Teacher("Joun", 21, []);
 
