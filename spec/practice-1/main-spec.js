@@ -3,13 +3,13 @@ const Student = require('../../main/practice-1/student');
 const Worker = require('../../main/practice-1/worker');
 
 describe("Person", () => {
-  it("should have field name and age", () => {
+ fit("should have field name and age", () => {
     let person = new Person("Tom", 21);
     expect(person.name).toBe("Tom");
     expect(person.age).toBe(21);
   });
 
-  it("should have a method introduce, introduce person with name and age", () => {
+  fit("should have a method introduce, introduce person with name and age", () => {
     let person = new Person("Tom", 21);
 
     let introduce = person.introduce();
@@ -18,7 +18,7 @@ describe("Person", () => {
 
   });
 
-  describe("Student", () => {
+  fdescribe("Student", () => {
     it("should have field name, age and class number", () => {
       let student = new Student("Tom", 21, 2);
       expect(student.name).toBe("Tom");
@@ -37,7 +37,7 @@ describe("Person", () => {
 
   });
 
-  describe("Worker", () => {
+  fdescribe("Worker", () => {
 
     it("should have field name, age and klass", () => {
       let worker = new Worker("Tom", 21, 2);
