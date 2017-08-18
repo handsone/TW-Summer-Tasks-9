@@ -47,8 +47,7 @@ describe("Student", () => {
     let student = new Student("Tom", 21, clazz);
     let introduce = student.introduce();
 
-    expect(introduce).toBe("My name is Tom. I am 21 years old. I am a Student. I haven't been allowed to joi" +
-        "n Class.");
+    expect(introduce).toBe("My name is Tom. I am 21 years old. I am a Student. I haven't been allowed to joi" + "n Class.");
 
   });
 
@@ -156,7 +155,7 @@ describe("Class", () => {
     let clazz = new Class(2);
     let student = new Student("Jerry", 21, clazz);
     let teacher = new Teacher("Tom", 21, [clazz]);
-    spyOn(teacher, 'notifyStudentAppended');
+    spyOn(teacher,'notifyStudentAppended');
     clazz.appendMember(student);
     expect(teacher.notifyStudentAppended).toHaveBeenCalledWith("Jerry has joined Class 2");
   });
@@ -171,7 +170,7 @@ describe("Class", () => {
     spyOn(teacher, 'notifyStudentAppended');
     clazz.appendMember(student);
     clazz.assignLeader(student);
-    expect(teacher.notifyLeaderAssigned).toHaveBeenCalledWith("Jerry become Leader of Class 2")
+    expect(teacher.notifyLeaderAssigned).toHaveBeenCalledWith("Jerry become Leader of Class 2");
   });
 
 });

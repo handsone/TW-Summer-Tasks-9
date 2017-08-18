@@ -6,9 +6,13 @@ module.exports = class Teacher extends Person {
 		this.clazzes = clazz ;
 	}	
 	introduce(){
+		let classes = [];
+		for ( let A of this.clazzes  ){
+			classes.push(A.number);
+		}
 		if (this.clazzes.length === 0 ){
 			return super.introduce() + ' I am a Teacher. I teach No Class.' ;
 		}
-		return super.introduce() + ' I am a Teacher. I teach Class ' + this.clazzes[0].number + ',' + this.clazzes[1].number + '.' ;
+		return super.introduce() + ' I am a Teacher. I teach Class ' + classes.join(',') + '.'; 
 	}
 };

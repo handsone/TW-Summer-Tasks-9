@@ -4,8 +4,6 @@ module.exports = class Class {
 		this.number = number ;
 	}
 	assignLeader(student){
-		if (student.name ===  'Tom'){
-			this.Leader = 'Tom' ;
-		}	
+			this.Leader = student.name ;
 	}
 };

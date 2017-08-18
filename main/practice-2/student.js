@@ -6,7 +6,7 @@ module.exports = class Student extends Person {
 		this.clazz =  Class ;
 	}
 	introduce(){
-		if(this.clazz.Leader === 'Tom' ){
+		if(this.clazz.Leader === this.name ){
 			return super.introduce() + " I am a Student. I am Leader of Class " + this.clazz.number + ".";
 		}
 		return super.introduce() + ' I am a Student. I am at Class ' + this.clazz.number  + '.' ;
